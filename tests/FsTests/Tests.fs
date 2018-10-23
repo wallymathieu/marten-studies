@@ -57,19 +57,19 @@ type CustomerDataTests()=
 
     [<Fact>]
     member this.CanGetCustomerById()=
-        Assert.True(session.GetCustomer "1" |> Option.isSome)
+        Assert.True(session |> Session.getCustomer "1" |> Option.isSome)
 
     [<Fact>]
     member this.CanGetProductById()=
-        Assert.True(session.GetProduct "1" |> Option.isSome)
+        Assert.True(session |> Session.getProduct "1" |> Option.isSome)
 
     [<Fact>]
     member this.AProductThatDoesNotExist()=
-        Assert.True(session.GetProduct "1000" |> Option.isNone)
+        Assert.True(session|> Session.getProduct "1000" |> Option.isNone)
 
     [<Fact>]
     member this.OrderContainsProduct()=
-        match session.GetOrderProducts "1" with
+        match session |> Session.getOrderProducts "1" with
         | Some (order,products) -> 
             let productId = "1"
             Assert.True(order.Products |> Seq.tryFind( (=) productId) |> Option.isSome)
