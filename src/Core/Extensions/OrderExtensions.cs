@@ -4,8 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using Marten;
-using Marten.Linq;
-using Marten.Services.Includes;
 
 namespace SomeBasicMartenApp.Core.Extensions
 {
@@ -17,7 +15,7 @@ namespace SomeBasicMartenApp.Core.Extensions
             var dict = new Dictionary<string, Customer>();
             return session.Query<Order>()
                 .Where(predicate)
-                .Include(o => o.CustomerId, dict, JoinType.LeftOuter)
+                .Include(o => o.CustomerId, dict)
                 .ToList()
                 .Select(o => new
                 {
