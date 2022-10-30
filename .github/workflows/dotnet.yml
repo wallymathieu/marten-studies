@@ -37,5 +37,5 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       env:
-        MARTEN_STUDIES: "User ID=postgres;Password=postgres;Host=postgres;Port=5432;Database=marten_studies;Pooling=true;Min Pool Size=0;Max Pool Size=100;Connection Lifetime=0;"
+        MARTEN_STUDIES: "User ID=postgres;Password=postgres;Host=postgres;Port=5432;Database=marten_studies"
       run: dotnet test --no-build --verbosity normal
