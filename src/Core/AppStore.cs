@@ -1,6 +1,7 @@
 ﻿using System;
 using Marten;
 using Marten.Events;
+using Weasel.Core;
 
 namespace SomeBasicMartenApp.Core
 {

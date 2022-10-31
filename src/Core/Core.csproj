@@ -4,7 +4,7 @@
     <RootNamespace>SomeBasicMartenApp.Core</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Marten" Version="3.0.1" />
+    <PackageReference Include="Marten" Version="5.10.1" />
     <PackageReference Include="Saithe" Version="2.1.1" />
   </ItemGroup>
 </Project>
