@@ -9,6 +9,7 @@
     </ItemGroup>
     <ItemGroup>
         <PackageReference Include="FSharpPlus" Version="1.2.5" />
+        <PackageReference Include="Marten" Version="5.10.1" />
         <PackageReference Include="Marten.FSharp" Version="0.4.3" />
     </ItemGroup>
 
